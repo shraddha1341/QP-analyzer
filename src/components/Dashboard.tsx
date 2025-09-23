@@ -45,34 +45,96 @@ const Dashboard = ({ user, onLogout }: DashboardProps) => {
       case "home":
         return (
           <div className="space-y-8 animate-fade-in">
-            <div className="glass-card p-8 text-center">
-              <h2 className="text-2xl font-bold gradient-text mb-4">
-                Welcome to AI Question Analysis
-              </h2>
-              <p className="text-gray-400 mb-6">
-                Upload your questions or paste them directly to get comprehensive quality analysis
-              </p>
-              <div className="grid md:grid-cols-3 gap-6">
-                <div className="glass-card p-6 hover:scale-105 transition-transform duration-300">
-                  <div className="text-indigo-400 text-3xl font-bold mb-2">📊</div>
-                  <h3 className="font-semibold mb-2">Difficulty Analysis</h3>
-                  <p className="text-gray-400 text-sm">
-                    Categorize questions by difficulty level
-                  </p>
+            {/* Hero Section */}
+            <div className="glass-card p-12 text-center">
+              <div className="max-w-4xl mx-auto">
+                <h2 className="text-4xl font-bold gradient-text mb-6">
+                  Welcome to AI Question Analysis
+                </h2>
+                <p className="text-gray-300 text-lg mb-8 leading-relaxed">
+                  Transform your educational content with AI-powered question analysis. 
+                  Upload your questions and get comprehensive insights into difficulty levels, 
+                  cognitive complexity, and clarity metrics.
+                </p>
+                
+                {/* Key Features Grid */}
+                <div className="grid md:grid-cols-3 gap-8 mb-12">
+                  <div className="glass-card p-8 hover:scale-105 transition-transform duration-300">
+                    <div className="text-indigo-400 text-4xl font-bold mb-4">📊</div>
+                    <h3 className="text-xl font-semibold mb-3 text-gray-200">Difficulty Analysis</h3>
+                    <p className="text-gray-400 leading-relaxed">
+                      Automatically categorize questions into Easy, Medium, and Hard difficulty levels 
+                      using advanced NLP algorithms for balanced assessment creation.
+                    </p>
+                  </div>
+                  <div className="glass-card p-8 hover:scale-105 transition-transform duration-300">
+                    <div className="text-purple-400 text-4xl font-bold mb-4">🧠</div>
+                    <h3 className="text-xl font-semibold mb-3 text-gray-200">Bloom's Taxonomy</h3>
+                    <p className="text-gray-400 leading-relaxed">
+                      Classify questions across all six cognitive levels: Remember, Understand, 
+                      Apply, Analyze, Evaluate, and Create for comprehensive learning assessment.
+                    </p>
+                  </div>
+                  <div className="glass-card p-8 hover:scale-105 transition-transform duration-300">
+                    <div className="text-cyan-400 text-4xl font-bold mb-4">✨</div>
+                    <h3 className="text-xl font-semibold mb-3 text-gray-200">Clarity Score</h3>
+                    <p className="text-gray-400 leading-relaxed">
+                      Measure question clarity and quality with detailed metrics including 
+                      readability, ambiguity detection, and improvement suggestions.
+                    </p>
+                  </div>
                 </div>
-                <div className="glass-card p-6 hover:scale-105 transition-transform duration-300">
-                  <div className="text-purple-400 text-3xl font-bold mb-2">🧠</div>
-                  <h3 className="font-semibold mb-2">Bloom's Taxonomy</h3>
-                  <p className="text-gray-400 text-sm">
-                    Classify cognitive complexity levels
-                  </p>
+
+                {/* Additional Features */}
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div className="glass-card p-6 text-left">
+                    <h4 className="text-lg font-semibold text-gray-200 mb-3 flex items-center">
+                      <span className="text-green-400 mr-2">📈</span>
+                      Analytics Dashboard
+                    </h4>
+                    <p className="text-gray-400 text-sm">
+                      Visualize your question data with interactive charts and detailed breakdowns 
+                      to identify patterns and improve your assessment quality.
+                    </p>
+                  </div>
+                  <div className="glass-card p-6 text-left">
+                    <h4 className="text-lg font-semibold text-gray-200 mb-3 flex items-center">
+                      <span className="text-yellow-400 mr-2">⚡</span>
+                      Instant Results
+                    </h4>
+                    <p className="text-gray-400 text-sm">
+                      Get immediate feedback on your questions with real-time processing 
+                      and comprehensive analysis reports generated in seconds.
+                    </p>
+                  </div>
                 </div>
-                <div className="glass-card p-6 hover:scale-105 transition-transform duration-300">
-                  <div className="text-cyan-400 text-3xl font-bold mb-2">✨</div>
-                  <h3 className="font-semibold mb-2">Clarity Score</h3>
-                  <p className="text-gray-400 text-sm">
-                    Measure question clarity and quality
-                  </p>
+              </div>
+            </div>
+            
+            {/* Getting Started */}
+            <div className="glass-card p-8">
+              <div className="max-w-3xl mx-auto text-center">
+                <h3 className="text-2xl font-bold gradient-text mb-4">Getting Started</h3>
+                <p className="text-gray-400 mb-6">
+                  Ready to analyze your questions? Choose your preferred method below:
+                </p>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="glass-card p-6 hover:bg-gray-700/30 transition-colors duration-300 cursor-pointer"
+                       onClick={() => setActiveModule("upload")}>
+                    <div className="text-indigo-400 text-2xl mb-3">📁</div>
+                    <h4 className="font-semibold text-gray-200 mb-2">Upload Files</h4>
+                    <p className="text-gray-400 text-sm">
+                      Upload .txt, .csv, or .pdf files containing your questions
+                    </p>
+                  </div>
+                  <div className="glass-card p-6 hover:bg-gray-700/30 transition-colors duration-300 cursor-pointer"
+                       onClick={() => setActiveModule("upload")}>
+                    <div className="text-purple-400 text-2xl mb-3">✏️</div>
+                    <h4 className="font-semibold text-gray-200 mb-2">Paste Text</h4>
+                    <p className="text-gray-400 text-sm">
+                      Directly paste your questions for instant analysis
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

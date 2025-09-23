@@ -24,7 +24,7 @@ const Header = ({ user, onLogout, onToggleSidebar }: HeaderProps) => {
               AI Question Quality Analyzer
             </h1>
             <p className="text-gray-400 text-sm">
-              Comprehensive question analysis and improvement
+              Analyze • Classify • Improve
             </p>
           </div>
         </div>
@@ -36,7 +36,7 @@ const Header = ({ user, onLogout, onToggleSidebar }: HeaderProps) => {
             </div>
             <div className="text-sm">
               <p className="text-gray-300 font-medium">{user.email}</p>
-              <p className="text-gray-500">Premium User</p>
+              <p className="text-gray-500">QA Analyzer</p>
             </div>
           </div>
 

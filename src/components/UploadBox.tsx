@@ -14,11 +14,15 @@ const UploadBox = ({ onAnalyze }: UploadBoxProps) => {
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleFileSelect = (file: File) => {
-    if (file.type === "text/plain" || file.name.endsWith(".csv") || file.name.endsWith(".txt")) {
+    if (file.type === "text/plain" || 
+        file.type === "application/pdf" || 
+        file.name.endsWith(".csv") || 
+        file.name.endsWith(".txt") || 
+        file.name.endsWith(".pdf")) {
       setSelectedFile(file);
       setPastedText(""); // Clear text when file is selected
     } else {
-      alert("Please select a .txt or .csv file");
+      alert("Please select a .txt, .csv, or .pdf file");
     }
   };
 
@@ -58,7 +62,7 @@ const UploadBox = ({ onAnalyze }: UploadBoxProps) => {
             Upload Questions for Analysis
           </h2>
           <p className="text-gray-400">
-            Upload a file (.txt/.csv) or paste your questions directly
+            Upload a file (.txt/.csv/.pdf) or paste your questions directly
           </p>
         </div>
 
@@ -88,7 +92,7 @@ const UploadBox = ({ onAnalyze }: UploadBoxProps) => {
                   {selectedFile ? selectedFile.name : "Drop your file here or click to browse"}
                 </p>
                 <p className="text-gray-500 text-sm">
-                  Supports .txt and .csv files
+                  Supports .txt, .csv, and .pdf files
                 </p>
               </div>
             </div>
@@ -96,7 +100,7 @@ const UploadBox = ({ onAnalyze }: UploadBoxProps) => {
             <input
               ref={fileInputRef}
               type="file"
-              accept=".txt,.csv"
+              accept=".txt,.csv,.pdf"
               onChange={(e) => {
                 const file = e.target.files?.[0];
                 if (file) handleFileSelect(file);
