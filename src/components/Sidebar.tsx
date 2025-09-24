@@ -85,12 +85,6 @@ const Sidebar = ({ activeModule, onModuleChange, isOpen, onToggle }: SidebarProp
           })}
         </nav>
 
-        {/* Footer */}
-        <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-white/10">
-          <div className={`text-center transition-all duration-300 ${isOpen ? 'opacity-100' : 'opacity-0'}`}>
-            <p className="text-xs text-gray-500">Version 1.0</p>
-          </div>
-        </div>
       </div>
     </>
   );

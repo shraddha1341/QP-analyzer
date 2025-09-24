@@ -21,14 +21,6 @@ const LandingPage = ({ onStart }: LandingPageProps) => {
           <img src={logoImage} alt="QA Analyzer Logo" className="w-10 h-10" />
           <span className="text-white text-xl font-bold">QA Analyzer</span>
         </div>
-        <div className="hidden md:flex items-center space-x-8">
-          <span className="text-white/80 hover:text-white cursor-pointer transition-colors">Home</span>
-          <span className="text-white/80 hover:text-white cursor-pointer transition-colors">Resources</span>
-          <span className="text-white/80 hover:text-white cursor-pointer transition-colors">About</span>
-          <Button variant="outline" className="text-white border-white/30 hover:bg-white/10 hover:border-white/50">
-            Contact
-          </Button>
-        </div>
       </nav>
 
       {/* Main Content */}
@@ -56,13 +48,6 @@ const LandingPage = ({ onStart }: LandingPageProps) => {
                 className="bg-gradient-to-r from-pink-500 to-cyan-500 hover:from-pink-600 hover:to-cyan-600 text-white font-semibold px-8 py-4 text-lg transition-all duration-300 transform hover:scale-105"
               >
                 🚀 Start Analyzing
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="text-white border-white/30 hover:bg-white/10 hover:border-white/50 px-8 py-4 text-lg"
-              >
-                📚 Learn More
               </Button>
             </div>
 
@@ -103,29 +88,6 @@ const LandingPage = ({ onStart }: LandingPageProps) => {
         </div>
       </div>
 
-      {/* Bottom Stats/Features */}
-      <div className="relative z-10 pb-12">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
-              <div className="text-3xl font-bold text-white mb-2">1000+</div>
-              <div className="text-white/70 text-sm">Questions Analyzed</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
-              <div className="text-3xl font-bold text-white mb-2">95%</div>
-              <div className="text-white/70 text-sm">Accuracy Rate</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
-              <div className="text-3xl font-bold text-white mb-2">50+</div>
-              <div className="text-white/70 text-sm">Institutions</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
-              <div className="text-3xl font-bold text-white mb-2">24/7</div>
-              <div className="text-white/70 text-sm">Available</div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
