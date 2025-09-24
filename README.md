@@ -1,24 +1,47 @@
-# Welcome to your Lovable project
+📘 AI Question Quality Analyzer
 
-## Project info
+🚀 An AI-powered tool that helps teachers and educators design better, fairer, and more effective exam papers.
+It analyzes uploaded exam questions and provides insights on difficulty, Bloom’s Taxonomy classification, and language clarity.
 
-**URL**: https://lovable.dev/projects/1c7b8ba2-2fbc-45ee-9a60-51a5d180c5be
+✨ Features
 
-## How can I edit this code?
+📊 Difficulty Prediction → Classifies questions into Easy / Medium / Hard.
 
-There are several ways of editing your application.
+🧠 Bloom’s Taxonomy Tagging → Maps questions to Recall, Apply, Analyze.
 
-**Use Lovable**
+📝 Clarity Check → Rates question language using readability metrics.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/1c7b8ba2-2fbc-45ee-9a60-51a5d180c5be) and start prompting.
+📈 Visual Insights → Beautiful charts for difficulty & Bloom’s levels.
 
-Changes made via Lovable will be committed automatically to this repo.
+⚡ Fast & Scalable → Works for schools, colleges, and e-learning platforms.
 
-**Use your preferred IDE**
+🖥️ Tech Stack
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Frontend: React, TailwindCSS, Recharts, Lucide-react
+Backend: Flask (Python), REST API
+AI/NLP Models: Hugging Face Transformers (BERT/Roberta), spaCy
+Datasets: RACE (difficulty), SQuAD (Q&A), readability metrics (Flesch-Kincaid)
+Database: SQLite / MongoDB (optional)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+🎯 Impact
+
+✅ Helps educators maintain balanced and fair exams.
+
+✅ Saves time by automating review & moderation.
+
+✅ Improves student learning outcomes by ensuring clarity and proper difficulty levels.
+
+👨‍💻 Team Kanya Rashi
+
+T. Sai Saketh
+
+Shraddha
+
+Shiv Narayan
+
+Sai Krishna
+
+Hackathon: UDAYA 1.O | Theme: AI in Education
 
 Follow these steps:
 
@@ -36,38 +59,4 @@ npm i
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/1c7b8ba2-2fbc-45ee-9a60-51a5d180c5be) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
