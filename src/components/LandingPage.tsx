@@ -55,16 +55,26 @@ const LandingPage = ({ onStart }: LandingPageProps) => {
 
           {/* Right Content - Decorative */}
           <div className="hidden lg:flex items-center justify-center">
-            <div className="relative">
-              {/* Large Logo/Icon */}
-              <div className="w-80 h-80 bg-gradient-to-br from-white/20 to-white/5 rounded-full backdrop-blur-md flex items-center justify-center">
-                <img src={logoImage} alt="QA Analyzer" className="w-48 h-48 drop-shadow-2xl" />
+            <div className="relative w-96 h-96">
+              {/* Central Large Circle */}
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-br from-purple-600/30 to-purple-800/20 rounded-full backdrop-blur-sm border border-white/10 flex items-center justify-center">
+                <div className="w-64 h-64 bg-gradient-to-br from-purple-500/40 to-purple-700/30 rounded-full backdrop-blur-md flex items-center justify-center">
+                  <img src={logoImage} alt="QA Analyzer" className="w-32 h-32 drop-shadow-2xl" />
+                </div>
               </div>
               
-              {/* Floating Elements */}
-              <div className="absolute -top-8 -right-8 w-16 h-16 bg-gradient-to-br from-pink-400 to-purple-500 rounded-2xl rotate-12 animate-bounce shadow-2xl"></div>
-              <div className="absolute -bottom-8 -left-8 w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full animate-pulse shadow-2xl"></div>
-              <div className="absolute top-1/2 -right-12 w-12 h-12 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-xl -rotate-12 animate-bounce delay-1000 shadow-xl"></div>
+              {/* Floating Animated Boxes */}
+              <div className="absolute top-8 right-8 w-20 h-16 bg-gradient-to-br from-pink-400 to-pink-600 rounded-2xl animate-[bounce_3s_ease-in-out_infinite] shadow-2xl"></div>
+              
+              <div className="absolute bottom-16 left-4 w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full animate-[pulse_2s_ease-in-out_infinite] shadow-2xl"></div>
+              
+              <div className="absolute top-1/3 right-2 w-18 h-14 bg-gradient-to-br from-orange-400 to-yellow-500 rounded-2xl animate-[bounce_2.5s_ease-in-out_infinite_0.5s] shadow-2xl"></div>
+              
+              <div className="absolute bottom-8 right-16 w-12 h-12 bg-gradient-to-br from-cyan-400 to-teal-500 rounded-xl animate-[pulse_3s_ease-in-out_infinite_1s] shadow-xl"></div>
+              
+              <div className="absolute top-12 left-12 w-14 h-18 bg-gradient-to-br from-violet-400 to-purple-500 rounded-2xl animate-[bounce_2.8s_ease-in-out_infinite_1.5s] shadow-xl"></div>
+              
+              <div className="absolute bottom-1/3 right-1/4 w-10 h-10 bg-gradient-to-br from-emerald-400 to-green-500 rounded-full animate-[pulse_2.2s_ease-in-out_infinite_2s] shadow-lg"></div>
             </div>
           </div>
         </div>
