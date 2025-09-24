@@ -12,6 +12,9 @@ const UploadBox = ({ onAnalyze }: UploadBoxProps) => {
   const [pastedText, setPastedText] = useState("");
   const [isDragging, setIsDragging] = useState(false);
   const [generatePrompt, setGeneratePrompt] = useState("");
+  const [numQuestions, setNumQuestions] = useState("10");
+  const [difficulty, setDifficulty] = useState("Mixed");
+  const [bloomsLevel, setBloomsLevel] = useState("Mixed");
   const [generatedQuestions, setGeneratedQuestions] = useState("");
   const [isGenerating, setIsGenerating] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -216,17 +219,75 @@ const UploadBox = ({ onAnalyze }: UploadBoxProps) => {
         </div>
 
         <div className="space-y-6">
-          <div>
-            <label className="block text-sm font-medium text-gray-300 mb-3">
-              Enter your topic or prompt:
-            </label>
-            <Textarea
-              value={generatePrompt}
-              onChange={(e) => setGeneratePrompt(e.target.value)}
-              placeholder="e.g., Artificial Intelligence in Education, Climate Change Impact, Data Structures and Algorithms..."
-              className="min-h-[120px] bg-gray-800/50 border-gray-700 text-white placeholder-gray-400 
-                       focus:border-purple-500 focus:ring-purple-500/20 transition-all duration-300 resize-none"
-            />
+          <div className="grid lg:grid-cols-2 gap-6">
+            <div>
+              <label className="block text-sm font-medium text-gray-300 mb-3">
+                Enter your topic or prompt:
+              </label>
+              <Textarea
+                value={generatePrompt}
+                onChange={(e) => setGeneratePrompt(e.target.value)}
+                placeholder="e.g., Artificial Intelligence in Education, Climate Change Impact, Data Structures and Algorithms..."
+                className="min-h-[120px] bg-gray-800/50 border-gray-700 text-white placeholder-gray-400 
+                         focus:border-purple-500 focus:ring-purple-500/20 transition-all duration-300 resize-none"
+              />
+            </div>
+            
+            <div className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-300 mb-2">
+                  Number of Questions:
+                </label>
+                <select
+                  value={numQuestions}
+                  onChange={(e) => setNumQuestions(e.target.value)}
+                  className="w-full bg-gray-800/50 border border-gray-700 text-white rounded-md px-3 py-2
+                           focus:border-purple-500 focus:ring-purple-500/20 transition-all duration-300"
+                >
+                  <option value="5">5 Questions</option>
+                  <option value="10">10 Questions</option>
+                  <option value="15">15 Questions</option>
+                  <option value="20">20 Questions</option>
+                </select>
+              </div>
+              
+              <div>
+                <label className="block text-sm font-medium text-gray-300 mb-2">
+                  Difficulty Level:
+                </label>
+                <select
+                  value={difficulty}
+                  onChange={(e) => setDifficulty(e.target.value)}
+                  className="w-full bg-gray-800/50 border border-gray-700 text-white rounded-md px-3 py-2
+                           focus:border-purple-500 focus:ring-purple-500/20 transition-all duration-300"
+                >
+                  <option value="Mixed">Mixed Difficulty</option>
+                  <option value="Easy">Easy</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Hard">Hard</option>
+                </select>
+              </div>
+              
+              <div>
+                <label className="block text-sm font-medium text-gray-300 mb-2">
+                  Bloom's Taxonomy Level:
+                </label>
+                <select
+                  value={bloomsLevel}
+                  onChange={(e) => setBloomsLevel(e.target.value)}
+                  className="w-full bg-gray-800/50 border border-gray-700 text-white rounded-md px-3 py-2
+                           focus:border-purple-500 focus:ring-purple-500/20 transition-all duration-300"
+                >
+                  <option value="Mixed">Mixed Levels</option>
+                  <option value="Remember">Remember</option>
+                  <option value="Understand">Understand</option>
+                  <option value="Apply">Apply</option>
+                  <option value="Analyze">Analyze</option>
+                  <option value="Evaluate">Evaluate</option>
+                  <option value="Create">Create</option>
+                </select>
+              </div>
+            </div>
           </div>
 
           <div className="text-center">

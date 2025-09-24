@@ -7,7 +7,7 @@ interface LandingPageProps {
 
 const LandingPage = ({ onStart }: LandingPageProps) => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-600 via-purple-600 to-purple-700 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 relative overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 right-20 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
@@ -51,24 +51,6 @@ const LandingPage = ({ onStart }: LandingPageProps) => {
               </Button>
             </div>
 
-            {/* Feature Highlights */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-12">
-              <div className="text-center lg:text-left">
-                <div className="text-cyan-300 text-2xl mb-2">📊</div>
-                <h3 className="text-white font-semibold mb-1">Difficulty Analysis</h3>
-                <p className="text-white/60 text-sm">AI-powered categorization</p>
-              </div>
-              <div className="text-center lg:text-left">
-                <div className="text-pink-300 text-2xl mb-2">🧠</div>
-                <h3 className="text-white font-semibold mb-1">Bloom's Taxonomy</h3>
-                <p className="text-white/60 text-sm">Cognitive level mapping</p>
-              </div>
-              <div className="text-center lg:text-left">
-                <div className="text-purple-300 text-2xl mb-2">✨</div>
-                <h3 className="text-white font-semibold mb-1">Quality Metrics</h3>
-                <p className="text-white/60 text-sm">Clarity & improvement insights</p>
-              </div>
-            </div>
           </div>
 
           {/* Right Content - Decorative */}
