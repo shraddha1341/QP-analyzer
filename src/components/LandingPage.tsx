@@ -55,11 +55,11 @@ const LandingPage = ({ onStart }: LandingPageProps) => {
 
           {/* Right Content - Decorative */}
           <div className="hidden lg:flex items-center justify-center">
-            <div className="relative w-96 h-96">
+            <div className="relative w-[500px] h-[500px]">
               {/* Central Large Circle */}
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-br from-purple-600/30 to-purple-800/20 rounded-full backdrop-blur-sm border border-white/10 flex items-center justify-center">
-                <div className="w-64 h-64 bg-gradient-to-br from-purple-500/40 to-purple-700/30 rounded-full backdrop-blur-md flex items-center justify-center">
-                  <img src={logoImage} alt="QA Analyzer" className="w-32 h-32 drop-shadow-2xl" />
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[450px] h-[450px] bg-gradient-to-br from-purple-600/30 to-purple-800/20 rounded-full backdrop-blur-sm border border-white/10 flex items-center justify-center">
+                <div className="w-80 h-80 bg-gradient-to-br from-purple-500/40 to-purple-700/30 rounded-full backdrop-blur-md flex items-center justify-center">
+                  <img src={logoImage} alt="QA Analyzer" className="w-48 h-48 drop-shadow-2xl" />
                 </div>
               </div>
             </div>
